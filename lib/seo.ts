@@ -1,5 +1,5 @@
 export const SITE_NAME = "Alexas Cleaning Services";
-export const SITE_URL = "https://alexascleaning.com"; // Placeholder URL
+export const SITE_URL = "https://www.cleaningservicesalexas.com";
 export const SITE_DESCRIPTION =
   "Top-rated professional cleaning services in Philadelphia. We offer expert residential cleaning, commercial janitorial services, and deep cleaning for homes and offices across Philly. 100% satisfaction guaranteed.";
 export const PHONE_NUMBER = "(555) 123-4567";
