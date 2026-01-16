@@ -13,6 +13,7 @@ export function ContactForm() {
     service: "",
     otherService: "",
     message: "",
+    address: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,6 +41,10 @@ export function ContactForm() {
       newErrors.phone = "Phone Number is required";
     } else if (formData.phone.replace(/\D/g, '').length < 10) {
        newErrors.phone = "Please enter a valid phone number";
+    }
+
+    if (!formData.address.trim()) {
+      newErrors.address = "Address is required";
     }
 
     setErrors(newErrors);
@@ -96,7 +101,7 @@ export function ContactForm() {
       
       if (result.success === true || result.status === 'success') {
          setIsSuccess(true);
-         setFormData({ name: "", email: "", phone: "", service: "", otherService: "", message: "" });
+         setFormData({ name: "", email: "", phone: "", service: "", otherService: "", message: "", address: "" });
          setErrors({});
       } else {
          throw new Error(result.message || "Unknown error occurred");
@@ -304,6 +309,19 @@ export function ContactForm() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <div className="space-y-2 group">
+        <label htmlFor="address" className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-primary transition-colors">Service Address *</label>
+        <input
+          id="address"
+          name="address"
+          className={getInputClass('address')}
+          placeholder="123 Street Ave, City, ST 12345"
+          value={formData.address}
+          onChange={handleChange}
+        />
+        <ErrorMessage message={errors.address} />
+      </div>
 
       <div className="space-y-2 group">
         <label htmlFor="message" className="text-sm font-semibold text-slate-700 ml-1 group-focus-within:text-primary transition-colors">Message / Special Instructions</label>

@@ -80,9 +80,22 @@ export function Footer() {
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} Alexas Cleaning Services. All rights reserved.
           </p>
-          <p className="text-xs text-slate-600 italic">
-            Designed for Excellence.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+            <p className="text-xs text-slate-600 italic">
+              Designed for Excellence.
+            </p>
+            <div className="text-[10px] text-slate-700 uppercase tracking-widest md:border-l md:border-slate-800 md:pl-6">
+              Developed by{" "}
+              <a 
+                href="https://tecnonets.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors font-bold text-slate-600"
+              >
+                Tecnonets
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
