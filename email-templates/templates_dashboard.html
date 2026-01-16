@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Templates Dashboard - Alexas Cleaning Services</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #f1f5f9; padding: 40px; color: #1e293b; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #0284c7; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; display: flex; flex-direction: column; }
+        .card h2 { margin-top: 0; font-size: 1.15rem; color: #0f172a; }
+        .card p { color: #64748b; font-size: 0.85rem; margin-bottom: 20px; flex-grow: 1; }
+        .btn { display: inline-block; width: 100%; text-align: center; padding: 12px; border-radius: 8px; font-weight: 600; text-decoration: none; margin-bottom: 5px; box-sizing: border-box; }
+        .btn-view { background: #0284c7; color: white; }
+        .tag { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.70rem; font-weight: bold; margin-bottom: 12px; width: fit-content; }
+        .tag-confirmation { background: #e0f2fe; color: #0369a1; }
+        .tag-lead { background: #dcfce7; color: #166534; }
+        .tag-reschedule { background: #ffedd5; color: #9a3412; }
+        .tag-reminder { background: #fef3c7; color: #92400e; }
+        .tag-review { background: #fdf2f8; color: #be185d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Templates Dashboard</h1>
+        <div class="grid">
+            <!-- Template 1 -->
+            <div class="card">
+                <span class="tag tag-confirmation">CONFIRMATION</span>
+                <h2>Appointment Confirmation</h2>
+                <p>Essential for officially booked services.</p>
+                <a href="confirmation_email_template.html" class="btn btn-view">👀 Preview</a>
+            </div>
+
+            <!-- Template 2 -->
+            <div class="card">
+                <span class="tag tag-lead">NEW LEAD</span>
+                <h2>Inquiry Received</h2>
+                <p>Welcome new leads immediately after submission.</p>
+                <a href="lead_inquiry_template.html" class="btn btn-view">👀 Preview</a>
+            </div>
+
+            <!-- Template 3 -->
+            <div class="card">
+                <span class="tag tag-reschedule">RESCHEDULE</span>
+                <h2>Reschedule Receipt</h2>
+                <p>Acknowledge receipt of a date change request.</p>
+                <a href="reschedule_received_template.html" class="btn btn-view">👀 Preview</a>
+            </div>
+
+            <!-- Template 4 -->
+            <div class="card">
+                <span class="tag tag-reminder">REMINDER</span>
+                <h2>Service Reminder</h2>
+                <p>Send 24-48 hours before to reduce no-shows.</p>
+                <a href="reminder_email_template.html" class="btn btn-view">👀 Preview</a>
+            </div>
+
+            <!-- Template 5 -->
+            <div class="card">
+                <span class="tag tag-review">FEEDBACK</span>
+                <h2>Review Request</h2>
+                <p>Boost your SEO by asking for Google reviews.</p>
+                <a href="review_request_template.html" class="btn btn-view">👀 Preview</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

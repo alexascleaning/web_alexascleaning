@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation - Alexas Cleaning Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #0284c7; /* Brand Primary Color */
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .content h2 {
+            color: #0f172a;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .details-box {
+            background-color: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .detail-item {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .detail-label {
+            font-weight: bold;
+            color: #0369a1;
+            width: 120px;
+            display: inline-block;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button {
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .reschedule-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+        }
+        .reschedule-link {
+            color: #0284c7;
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #f1f5f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ALEXAS CLEANING SERVICES</h1>
+        </div>
+        <div class="content">
+            <h2>Hello [Client Name],</h2>
+            <p>Your cleaning service has been successfully scheduled! We look forward to making your space shine.</p>
+            
+            <div class="details-box">
+                <div class="detail-item">
+                    <span class="detail-label">Service:</span> [Service Type]
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Date:</span> [Day, Month Date, Year]
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Arrival Window:</span> [Time: AM/PM]
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Location:</span> [Service Address]
+                </div>
+            </div>
+
+            <p>Our team will arrive within the specified window. Please ensure someone is available or instructions are provided for entry.</p>
+
+            <div class="reschedule-text">
+                Plans changed? No worries. You can easily request a change in your schedule through our client portal:
+                <br>
+                <a href="https://alexascleaning.com/reschedule" class="reschedule-link">Request to Reschedule Here</a>
+            </div>
+
+            <div class="button-container">
+                <a href="https://alexascleaning.com" class="button">Visit Our Website</a>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2026 Alexas Cleaning Services. All rights reserved.<br>
+            Professional Cleaning You Can Trust.
+        </div>
+    </div>
+</body>
+</html>
