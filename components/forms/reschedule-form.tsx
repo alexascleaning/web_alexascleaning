@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Send, Loader2, AlertCircle, CheckCircle2, User, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import * as gtag from "@/lib/gtag";
 
 const FORM_IDS = {
   name: "entry.1333544674",
@@ -103,6 +104,13 @@ export function RescheduleForm() {
 
       // Show success UI
       setIsSuccess(true);
+      
+      // Track event
+      gtag.event({
+        action: "reschedule_request",
+        category: "Contact",
+      });
+
       setFormData({ name: "", email: "", phone: "", currentDate: "", newDate: "", reason: "" });
       setErrors({});
 

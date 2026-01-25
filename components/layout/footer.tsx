@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, ShieldCheck } from "lucide-react";
 import { PHONE_NUMBER, EMAIL_ADDRESS, ADDRESS, SOCIAL_LINKS } from "@/lib/seo";
 import { SERVICES_DATA } from "@/lib/data";
+import * as gtag from "@/lib/gtag";
 
 export function Footer() {
   return (
@@ -26,8 +29,24 @@ export function Footer() {
               Professional, reliable, and thorough cleaning services for homes and businesses in Philadelphia. Satisfaction guaranteed.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></a>
-              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></a>
+              <a 
+                href={SOCIAL_LINKS.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors"
+                onClick={() => gtag.event({ action: "social_click", category: "Social", label: "Facebook" })}
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href={SOCIAL_LINKS.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors"
+                onClick={() => gtag.event({ action: "social_click", category: "Social", label: "Instagram" })}
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -67,7 +86,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a href={`mailto:${EMAIL_ADDRESS}`} className="text-sm hover:text-white transition-colors">{EMAIL_ADDRESS}</a>
+                <a 
+                  href={`mailto:${EMAIL_ADDRESS}`} 
+                  className="text-sm hover:text-white transition-colors"
+                  onClick={() => gtag.event({ action: "contact_click", category: "Contact", label: "Footer Email" })}
+                >
+                  {EMAIL_ADDRESS}
+                </a>
               </li>
             </ul>
           </div>

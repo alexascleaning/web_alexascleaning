@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { CookieConsent } from "@/components/layout/cookie-consent";
 import { JsonLd } from "@/components/json-ld";
 import { DEFAULT_METADATA } from "@/lib/seo";
 import Script from "next/script";
@@ -38,11 +39,20 @@ export default function RootLayout({
             gtag('config', 'G-JH63EG6S8F');
           `}
         </Script>
+
+        {/* Google AdSense - REPLACE pub-0000000000000000 WITH YOUR ACTUAL PUBLISHER ID */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

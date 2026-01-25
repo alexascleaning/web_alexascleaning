@@ -7,6 +7,7 @@ import { Menu, X, ShieldCheck, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EMAIL_ADDRESS } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import * as gtag from "@/lib/gtag";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -55,7 +56,7 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/contact">
+          <Link href="/contact" onClick={() => gtag.event({ action: "cta_click", category: "Navigation", label: "Header - Get a Quote" })}>
             <Button className="px-6">Get a Free Quote</Button>
           </Link>
         </div>
@@ -84,7 +85,13 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 mt-6">
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Link 
+                href="/contact" 
+                onClick={() => {
+                  setIsOpen(false);
+                  gtag.event({ action: "cta_click", category: "Navigation", label: "Mobile Header - Get a Quote" });
+                }}
+              >
                 <Button className="w-full h-12 text-lg">Get a Free Quote</Button>
               </Link>
               <a href={`mailto:${EMAIL_ADDRESS}`} className="text-center text-sm font-bold text-primary py-2">

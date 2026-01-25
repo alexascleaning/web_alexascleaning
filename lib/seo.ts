@@ -12,6 +12,10 @@ export const SOCIAL_LINKS = {
 };
 
 export const DEFAULT_METADATA = {
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: `${SITE_NAME} | #1 House & Office Cleaning in Philadelphia`,
     template: `%s | ${SITE_NAME}`,

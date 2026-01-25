@@ -1,3 +1,5 @@
+import { EMAIL_ADDRESS } from "@/lib/seo";
+
 export const metadata = {
   title: "Privacy Policy | Alexas Cleaning Services",
 };
@@ -21,15 +23,29 @@ export default function PrivacyPolicyPage() {
         <p>
           We use your information to provide cleaning services, communicate with you about appointments, send invoices, and improve our customer service. We do not sell your personal data to third parties.
         </p>
-        
-        <h3>3. Cookies</h3>
+
+        <h3>3. Cookies and Advertising</h3>
         <p>
-          Our website may use cookies to enhance your browsing experience and analyze website traffic. You can choose to disable cookies through your browser settings.
+          Our website uses cookies to enhance your browsing experience, analyze website traffic, and serve personalized content.
+        </p>
+        <p>
+          <strong>Google AdSense:</strong> We use Google AdSense to serve advertisements on our website. Google, as a third-party vendor, uses cookies to serve ads based on your visit to our site and other sites on the Internet.
+        </p>
+        <p>
+          <strong>DoubleClick Cookie:</strong> Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.
         </p>
         
-        <h3>4. Contact Us</h3>
+        <h3>4. Your Choices and Opt-Out</h3>
         <p>
-          If you have any questions about this Privacy Policy, please contact us at contact@alexascleaning.com.
+          You can choose to disable cookies through your individual browser settings. However, this may affect your ability to interact with our site.
+        </p>
+        <p>
+          Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Ad Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.aboutads.info</a>.
+        </p>
+        
+        <h3>5. Contact Us</h3>
+        <p>
+          If you have any questions about this Privacy Policy, please contact us at {EMAIL_ADDRESS}.
         </p>
       </div>
     </div>

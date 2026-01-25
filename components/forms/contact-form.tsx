@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Send, Loader2, AlertCircle, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import * as gtag from "@/lib/gtag";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -101,6 +102,14 @@ export function ContactForm() {
       
       if (result.success === true || result.status === 'success') {
          setIsSuccess(true);
+         
+         // Track event
+         gtag.event({
+           action: "generate_lead",
+           category: "Contact",
+           label: formData.service,
+         });
+
          setFormData({ name: "", email: "", phone: "", service: "", otherService: "", message: "", address: "" });
          setErrors({});
       } else {
